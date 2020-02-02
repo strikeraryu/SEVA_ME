@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/mun_main.css' %}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="center-div">
+      <table style="width: 100%; margin-top: 100px;">
+        <tr>
+          <th>Case code</th>
+          <th>Case LVL</th>
+          <th>Case Tag</th>
+          <th>Case Status</th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        {% for x,case in cases.items %}
+        <tr>
+          <td align="center">{{ x }}</td>
+          <td align="center">{{ case.case_lvl }}</td>
+          <td align="center">{{ case.tag }}</td>
+          <td align="center">{{ case.status }}</td>
+          <td>
+            <form action="/chng_wrk/{{ x }}" method="POST">
+              {% csrf_token %}
+              <input type="submit" class="button" value="Working" />
+            </form>
+          </td>
+          <td>
+            <form action="/done/{{ x }}" method="POST">
+              {% csrf_token %}
+              <input type="submit" class="button" value="Done" />
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>

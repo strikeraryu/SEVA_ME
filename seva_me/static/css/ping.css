@@ -1,0 +1,365 @@
+:root {
+    --clr-primary: rgb(54, 112, 199);
+    --clr-light: #f4f4f4;
+    --clr-dark: #333;
+    --clr-warning: rgb(99, 36, 36);
+}
+
+*,
+*::before,
+*::after {
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.tag{
+    color: black;
+    font-size: medium;
+}
+
+#custom-button {
+    width:200px;
+    margin-left: 100px;
+    padding: 10px;
+    color: white;
+    background-color:  rgb(0, 151, 230);
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #custom-button:hover {
+    background-color: rgb(0, 168, 255);
+  }
+  
+  #custom-text {
+    margin-left: 10px;
+    font-family: sans-serif;
+    color: #aaa;
+  }
+  
+
+body {
+    margin: 0;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    background: #0f8a9d;
+    background: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    color: var(--clr-light);
+    display: grid;
+    grid: "header header header header" auto "...... lists  active ......" auto/3fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
+}
+
+.centerdiv {
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: 48%;
+    left: 30%;
+    margin-left: 300px;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    transform: translate(-50%, -50%);
+    background: var(--clr-light);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.new-div {
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: 85%;
+    left: 30%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    transform: translate(-50%, -50%);
+    background: var(--clr-light);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.inputbox {
+    width: calc(100% - 40px);
+    font-size: 12px;
+    font-weight: 600;
+    height: 30px;
+    display: block;
+    margin: auto;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    border: 0px;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+.inputbox:hover {
+    font-size: 13px;
+}
+
+::placeholder{
+    color: rgb(139, 134, 134);
+}
+
+.statusbox {
+    width: calc(100% - 40px);
+    font-size: 13px;
+    font-weight: 600;
+    height: 70px;
+    display: block;
+    margin: auto;
+    border: 0px;
+    border-radius: 7px;
+    padding-bottom: 40px;
+    padding-inline-start: 8px;
+    box-sizing: border-box;
+}
+
+.statusbox:hover {
+    font-size: 15px;
+}
+
+.button {
+    width: calc(100% - 40px);
+    height: 30px;
+    display: block;
+    margin-top: 300px;
+    margin: auto;
+    color: white;
+    background-color: rgb(0, 151, 230);
+    border: none;
+}
+
+.mode {
+    display: flex;
+    flex-direction: row;
+}
+
+.mode-btn {
+    width: 90px;
+    height: 30px;
+    display: block;
+    color: white;
+    background-color: rgb(0, 151, 230);
+    border: 1px black;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.mode-btn:hover {
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    background-color: rgb(0, 168, 255);
+}
+
+.button:hover {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    background-color: rgb(0, 168, 255);
+    font-size: 15px;
+}
+
+.set-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    grid-area: header;
+    text-align: center;
+    font-size: calc(7vw + 2rem);
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    margin: 0em 0 0.5em;
+}
+
+.all-tasks {
+    grid-area: lists;
+}
+
+.task-list {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    list-style: circle;
+    padding-left: 1.1em;
+}
+
+.list-name {
+    cursor: pointer;
+}
+
+.list-name:hover {
+    opacity: 0.7;
+}
+
+form {
+    display: flex;
+}
+
+.btn {
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    padding: 0;
+    color: inherit;
+}
+
+.btn.create {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-right: 0.25em;
+    transition: opacity 250ms ease-in;
+}
+
+.btn.create:hover {
+    opacity: 0.7;
+}
+
+.btn.delete {
+    opacity: 0.7;
+    font-size: 1rem;
+    transition: color 200ms;
+}
+
+.btn.delete:hover {
+    color: var(--clr-warning);
+}
+
+.new {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    border-bottom: 1px solid currentColor;
+    font-size: inherit;
+    outline: none;
+    padding: 0.25em;
+    transition: border-bottom 150ms ease-in;
+    order: 2;
+}
+
+.new::-webkit-input-placeholder {
+    opacity: 0.4;
+}
+
+.new:-ms-input-placeholder {
+    opacity: 0.4;
+}
+
+.new::-ms-input-placeholder {
+    opacity: 0.4;
+}
+
+.new::placeholder {
+    opacity: 0.4;
+}
+
+.new:focus {
+    border-bottom-width: 3px;
+}
+
+.new:focus::-webkit-input-placeholder {
+    opacity: 0.15;
+}
+
+.new:focus:-ms-input-placeholder {
+    opacity: 0.15;
+}
+
+.new:focus::-ms-input-placeholder {
+    opacity: 0.15;
+}
+
+.new:focus::placeholder {
+    opacity: 0.15;
+}
+
+.new.list {
+    font-size: 1.1rem;
+}
+
+.new.task {
+    margin-bottom: 0;
+}
+
+.active-list {
+    font-weight: 700;
+}
+
+.todo-list {
+    --spacer: 1.5rem;
+    grid-area: active;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin-left: 10%;
+}
+
+.todo-header {
+    padding: var(--spacer);
+    background: #e4e4e4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-title {
+    margin: 0 1em 0 0;
+}
+
+.todo-body {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    padding: var(--spacer);
+    position: relative;
+}
+
+.new-task-creator .create {
+    color: var(--clr-primary);
+}
+
+.task label {
+    display: flex-inline;
+    align-items: center;
+    position: relative;
+}
+
+.task {
+    position: relative;
+    margin-bottom: 1.25em;
+}
+
+.task::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -0.5em;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.1;
+}
+
+.task label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    left: 1.5em;
+    top: 50%;
+    height: 3px;
+    background: currentColor;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    transition: -webkit-transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+.delete-stuff {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -35px;
+    color: var(--clr-light);
+}

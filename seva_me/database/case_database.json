@@ -1,0 +1,33 @@
+{
+  "prev_code": 1473,
+  "1471": {
+    "image": "database/case_image/1471.png",
+    "location": "",
+    "tag": "traff-flw",
+    "case_lvl": 0.6,
+    "status": "Done",
+    "user_rprt": [
+      "striker.aryu56@gmail.com"
+    ]
+  },
+  "1472": {
+    "image": "database/case_image/1472.png",
+    "location": "",
+    "tag": "public-pd",
+    "case_lvl": 0.5,
+    "status": "Done",
+    "user_rprt": [
+      "striker.aryu56@gmail.com"
+    ]
+  },
+  "1473": {
+    "image": "database/case_image/1473.png",
+    "location": "",
+    "tag": "other",
+    "case_lvl": 0.3,
+    "status": "Done",
+    "user_rprt": [
+      "striker.aryu56@gmail.com"
+    ]
+  }
+}

@@ -1,0 +1,266 @@
+html{
+    height: 100%;
+    overflow: hidden;
+    font-family: "Montserrat";
+    background-image: url("bg.jpg");
+}
+body{
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: "Montserrat";
+    
+}
+
+.nav-bar{
+background: #3498db;
+}
+
+.menu-btn{   
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    background: rgba(5, 5, 5, 0); 
+    border-radius: 4px 4px 4px 4px;
+    border: 0;
+    padding: 1px 1px ; 
+    cursor: pointer;
+    }
+
+.menu-btn:hover{
+    text-transform: uppercase; 
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
+
+nav{
+    width: 100%; height: 68px;
+    /*background-color:  red;*/
+    display: flex; 
+    margin-top: -20px;
+    }
+    
+    .logo{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    }
+    
+    .logo h1{
+    margin-left: 10px;
+    margin-top: 30px;
+    }
+    
+    .logo img{
+      width: 40px;
+      height: 40px;
+      margin-top: 22px;
+      margin-left: 25px;
+    
+    }
+    
+    .menu{
+    width: 50%; height: 10px;
+    }
+    
+    .menu ul{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:  center;
+    }
+    
+    .menu ul li{
+    list-style: none;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    }
+    .button {
+        width: calc(100% - 40px);
+        height: 30px;
+        display: block;
+        margin-top: 300px;
+        margin: auto;
+        color: white;
+        background-color: rgb(0, 151, 230);
+        border: none;
+    }
+
+    .button:hover {
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+        background-color: rgb(0, 168, 255);
+    }
+
+.centerdiv {
+    width: 80%;
+    height: 80%;
+    position: fixed;
+    background: rgba(5, 5, 5, 0);
+    left: 50%;
+    transform: translate(-50%, -2%);
+}
+
+.feed-div{
+    width: calc(100% - 40px);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    height: auto;
+    display: block;
+    margin: 200px;
+    padding:  10px;
+    border: 0px;
+    margin-top: 500px;
+    border-radius: 7px;
+    box-sizing: border-box;
+    background: white;
+    color: black;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    font-size: calc(12vw + 2rem);
+    font-weight: 700;
+    height: 0px;
+    padding-top: 0%;
+    color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    margin: 0em 0 0.5em;
+}
+
+.user{
+    width: calc(100% - 40px);
+    height: 1px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: -18px;
+    color: black;
+}
+
+.userdetails{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 5px;
+}
+
+.website{
+    width: calc(100% - 40px);
+    height: 1px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: -25px;
+    color: rgb(100, 99, 99);
+}
+
+.feed-header{
+    width: calc(100%);
+    height: 45px;
+    margin-top: -30px;
+    display: flex;
+    float: left;
+    text-align: left;
+}
+.img{
+    width: 40px;
+    height: 40px;
+}
+
+.new-task-creator .create {
+    margin-left: 350px;
+}
+
+.new.task {
+    margin-top: 35px;
+}
+
+.new {
+    background: transparent;
+    border: 0;
+    color: white;
+    border-bottom: 1px solid currentColor;
+    font-size: inherit;
+    outline: none;
+    padding: 0.25em;
+    transition: border-bottom 150ms ease-in;
+    order: 2;
+}
+
+.new::-webkit-input-placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.new:focus {
+    border-bottom-width: 3px;
+}
+
+.btn {
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    padding: 0;
+    color: inherit;
+}
+
+.btn.create {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-right: 0.25em;
+    transition: opacity 250ms ease-in;
+}
+
+.btn.create:hover {
+    opacity: 0.7;
+}
+
+
+header{
+    min-height: 100vh;
+    padding: 5vw 0 0vw;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+    height:auto;
+}
+header h1 {
+    margin-top: -100px;
+}
+header, header:before{
+    background: 50% 50% / cover;
+}
+header::before{
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+header * { 
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin: 0;
+    padding: 1em 0;
+}

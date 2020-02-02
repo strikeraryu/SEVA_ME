@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/status.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+ <div class="bgimg">  
+     <div class = "centerdiv">
+    <h3> {{ code }} </h3><br>
+    {% if status == "Received" %}
+    <h6>Your complaint has been delivered and the current level of the complaint is {{ curr_lvl }}</h6>
+    {% endif %}
+    {% if status == "working" %}
+    <h6>we are working on it and the current level of the complaint is {{ curr_lvl }}</h6>
+    {% endif %}
+    {% if status == "Done" %}
+    <h6>The problem dealt with and the current level of the complaint is {{ curr_lvl }}</h6>
+    {% endif %}
+</div>
+</div>
+</body>
+</html>

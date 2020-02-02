@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/ping.css' %}" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="centerdiv">
+    <form action="/create/ "  class="set-menu" method="post" enctype="multipart/form-data">{% csrf_token %}
+        <input type="file" name="image" id="custom-button" >
+        <input type="email" class="inputbox"  placeholder="Email" name="email" id="email">
+        <div>
+            <input type = "radio" name = "issue" id = "waste-m" value="waste-m">
+            <label for="waste-m" class="tag">
+                <span>Waste Managment</span>
+            </label>
+            <input type = "radio" name = "issue" id = "pot-hole" value="pot-hole">
+            <label for="pot-hole" class="tag">
+                <span>Potholes</span>
+            </label>
+            <input type = "radio" name = "issue" id = "sewage" value="sewage">
+            <label for="sewage" class="tag">
+                <span>sewage</span>
+            </label>
+            <input type = "radio" name = "issue" id = "electricity" value="electricity">
+            <label for="electricity" class="tag">
+                <span>electricity</span>
+            </label>
+            <input type = "radio" name = "issue" id = "public-pd" value="public-pd">
+            <label for="public-pd" class="tag">
+                <span>Public Property Damage</span>
+            </label>
+            <input type = "radio" name = "issue" id = "saf-sec" value="saf-sec">
+            <label for="saf-sec" class="tag">
+                <span>Safety and Security</span>
+            </label>
+            <input type = "radio" name = "issue" id = "traff-flw" value="traff-flw">
+            <label for="traff-flw" class="tag">
+                <span>Traffic Flow and Control</span>
+            </label>
+            <input type = "radio" name = "issue" id = "other" value="other">
+            <label for="other" class="tag">
+                <span>Other</span>
+            </label>  
+        </div>
+        <input type="submit" class="button" value="Submit">
+    </form>
+    <button id="loc" class="button">Get Location</button>{% csrf_token %}
+    <div>
+    
+    <script>
+        $('#loc').click(function(){
+        if(navigator.geolocation)
+        navigator.geolocation.getCurrentPosition(function(position){
+            console.log(position);
+            $.get( "http://maps.googleapis.com/maps/api/geocode/json?latlng="+ position.coords.latitude + "," + position.coords.longitude +"&sensor=false", function(data) {
+                $.ajax({
+                    type: "POST",
+                    url: "/create/",
+                    data: {
+                        "csrfmiddlewaretoken":'{{ csrf_token}}',
+                        "check_this": position,
+                    },
+                });
+                  })
+                });
+                else
+                console.log("not supported")
+    });
+</script>
+</body>
+</html>
